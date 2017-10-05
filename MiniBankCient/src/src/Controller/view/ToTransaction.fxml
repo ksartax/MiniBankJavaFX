@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.cell.*?> 
+<?import javafx.collections.*?> 
+<?import src.Model.*?> 
+
+<GridPane 
+    id="AnchorPane" 
+    prefHeight="600.0" 
+    prefWidth="800.0" 
+    styleClass="mainFxmlClass" 
+    xmlns:fx="http://javafx.com/fxml/1" 
+    fx:controller="src.Controller.ToTransactionController">
+    
+    <stylesheets>
+        <URL value="@/src/Controller/view/style/totransaction.css"/>
+        <URL value="@/src/Controller/view/style/core.css"></URL>
+    </stylesheets>
+    
+    <padding>
+        <Insets 
+            top="25" 
+            right="25" 
+            bottom="10" 
+            left="25"
+        />
+    </padding>
+    
+    <HBox spacing="10" 
+          alignment="top_left" 
+          GridPane.columnIndex="0" 
+          GridPane.rowIndex="0">
+        
+        <padding>
+            <Insets top="25" />
+        </padding>
+                
+        <Button 
+            styleClass="button" 
+            text="Menu" 
+            onAction="#returnMenuStage" 
+        />
+                
+    </HBox>
+    
+    <HBox spacing="10" alignment="top_center" GridPane.columnIndex="0" 
+          GridPane.rowIndex="1">
+        
+        <TextField fx:id="accountNumberSendTextField" promptText="Nr konta"
+                   prefWidth="200"/>
+        
+        <TextField fx:id="moneyToSendTextField" promptText="Ilosc pieniędzy"
+                   prefWidth="150"/>
+        
+        <Button fx:id="emailField" 
+                text="Wyślij"
+                onAction="#sendMoneyButton"
+                prefWidth="150"/>
+        
+        <Label fx:id="errorField" 
+                  />
+        
+    </HBox>
+    
+    <Label 
+        GridPane.columnIndex="0" 
+        GridPane.rowIndex="2"/>
+    
+    <BorderPane 
+        styleClass="menuPanel" 
+        prefHeight="300.0" 
+        prefWidth="800.0" 
+        GridPane.columnIndex="0" 
+        GridPane.rowIndex="3" 
+    >
+              
+        <center>
+               
+            <TableView fx:id="tableView" >
+                <columns>
+                    <TableColumn 
+                        text="Nr konta"
+                        prefWidth="250">
+                        
+                        <cellValueFactory>
+                            <PropertyValueFactory property="firstName" />
+                        </cellValueFactory>
+                        
+                    </TableColumn>
+                    <TableColumn 
+                        text="Ilosc pieniędzy"
+                        prefWidth="250">
+                        
+                        <cellValueFactory>
+                            <PropertyValueFactory property="lastName" />
+                        </cellValueFactory>
+                        
+                    </TableColumn>
+                    <TableColumn 
+                        text="Data"
+                        prefWidth="250">
+                        
+                        <cellValueFactory>
+                            <PropertyValueFactory property="data" />
+                        </cellValueFactory>
+                        
+                    </TableColumn>                  
+                </columns> 
+                
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        
+                    </FXCollections>
+                </items>
+                
+            </TableView>
+            
+        </center>
+        
+    </BorderPane>
+    
+    
+    <BorderPane 
+        styleClass="menuPanel" 
+        prefHeight="300.0" 
+        prefWidth="800.0" 
+        GridPane.columnIndex="0" 
+        GridPane.rowIndex="4" 
+    >
+              
+        <center>
+               
+            <TableView fx:id="tableViewUser" >
+                <columns>
+                    <TableColumn 
+                        text="Imie"
+                        prefWidth="250">
+                        
+                        <cellValueFactory>
+                            <PropertyValueFactory property="firstName" />
+                        </cellValueFactory>
+                        
+                    </TableColumn>
+                    <TableColumn 
+                        text="Nazwisko"
+                        prefWidth="250">
+                        
+                        <cellValueFactory>
+                            <PropertyValueFactory property="lastName" />
+                        </cellValueFactory>
+                        
+                    </TableColumn>
+                    <TableColumn 
+                        text="Nr konta"
+                        prefWidth="250">
+                        
+                        <cellValueFactory>
+                            <PropertyValueFactory property="accoutNr" />
+                        </cellValueFactory>
+                        
+                    </TableColumn>
+                </columns> 
+                
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        
+                    </FXCollections>
+                </items>
+                
+            </TableView>
+                
+        </center>
+        
+    </BorderPane>
+    
+</GridPane>

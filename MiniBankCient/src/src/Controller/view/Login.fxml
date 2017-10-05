@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+
+<GridPane  id="AnchorPane" alignment="center" 
+           prefHeight="600.0" prefWidth="800.0" styleClass="root" 
+           xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.Controller.LoginController">
+    <stylesheets>
+        <URL value="@/src/Controller/view/style/core.css"></URL>
+        <URL value="@/src/Controller/view/style/login.css"/>
+    </stylesheets>
+    
+    <padding>
+        <Insets top="25" right="25" bottom="10" left="25"/>
+    </padding>
+
+    <ImageView fx:id="logo" GridPane.columnIndex="0" GridPane.rowIndex="0" 
+        GridPane.columnSpan="2">
+    </ImageView>
+
+    <Text id="welcome-text" text="Witaj w banku" 
+        GridPane.columnIndex="0" GridPane.rowIndex="0" 
+        GridPane.columnSpan="2"/>
+ 
+    <Label text="Pin:"
+           GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+ 
+    <PasswordField fx:id="passwordField" 
+                   GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+    <Label fx:id="errorField" 
+                   GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+        
+    <padding>
+             <Insets bottom="25.0"  />
+    </padding>
+    
+    <HBox spacing="10" 
+          GridPane.columnIndex="1" GridPane.rowIndex="4">
+        
+         <padding>
+            <Insets top="25" />
+         </padding>
+        
+        <Button  styleClass="button" text="Zaloguj"    
+               onAction="#loginButtonAction" fx:id="loginButton" />
+        
+        <Button  styleClass="button" text="Rejestracja"     
+               onAction="#registerButtonAction" fx:id="registerButton" />
+    </HBox>
+    
+    <Text fx:id="actiontarget"
+          GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+    
+</GridPane>

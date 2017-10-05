@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+
+<GridPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" alignment="center"
+          styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" 
+          fx:controller="src.Controller.ProfilController">
+    
+    <stylesheets>
+        <URL value="@/src/Controller/view/style/profil.css"/>
+        <URL value="@/src/Controller/view/style/core.css"/>
+    </stylesheets>
+    
+    <padding>
+        <Insets top="25" right="25" bottom="10" left="25"/>
+    </padding>
+    
+    <BorderPane styleClass="menuPanel" prefHeight="600.0" prefWidth="800.0" 
+                GridPane.columnIndex="0" GridPane.rowIndex="0" >
+       
+        <top>
+            <HBox spacing="10" >
+        
+                <padding>
+                    <Insets top="25" />
+                </padding>
+                
+                <Button styleClass="button" text="Menu" 
+                onAction="#returnMenuStage" />
+                
+                <padding>
+                    <Insets left="25" />
+                </padding>
+                
+                <Button styleClass="button" text="Zapisz" 
+                onAction="#updateProfil" />
+                
+            </HBox>
+        </top>
+        
+        <center>
+            
+            <GridPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" alignment="center"
+                      styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" 
+            >
+               
+                <Label text="Informacje Personalne"
+                       GridPane.columnIndex="1" 
+                       styleClass="labelTitle"
+                       GridPane.rowIndex="0"
+                />
+                
+                <Label text="Imie:" 
+                       styleClass="labelTitle-15"
+                       GridPane.columnIndex="0" 
+                       GridPane.rowIndex="1"
+                />
+ 
+                <TextField 
+                    GridPane.columnIndex="1"
+                    GridPane.rowIndex="1"
+                    text="Damian"
+                    fx:id="firstNameTextField"
+                    disable="true"
+                />
+            
+                <Label text="Nazwisko:" 
+                       styleClass="labelTitle-15"
+                       GridPane.columnIndex="0" 
+                       GridPane.rowIndex="2"
+                />
+ 
+                <TextField 
+                    GridPane.columnIndex="1"
+                    GridPane.rowIndex="2"
+                    text="Seba"
+                    fx:id="lastNameTextField"
+                    disable="true"
+                />
+            
+                <Label text="Email:" 
+                       styleClass="labelTitle-15"
+                       GridPane.columnIndex="0" 
+                       GridPane.rowIndex="3"
+                />
+ 
+                <TextField 
+                    GridPane.columnIndex="1"
+                    GridPane.rowIndex="3"
+                    text="Damian@sa"
+                    disable="true"
+                    fx:id="emailTextField"
+                />
+            
+                <Label text="Telefon:" 
+                       styleClass="labelTitle-15"
+                       GridPane.columnIndex="0" 
+                       GridPane.rowIndex="4"
+                />
+ 
+                <TextField 
+                    GridPane.columnIndex="1"
+                    GridPane.rowIndex="4"
+                    text="1234"
+                    fx:id="telephoneTextField"
+                />
+                
+                
+                
+                <Label 
+                    GridPane.columnIndex="1" 
+                    styleClass="labelTitle"
+                    GridPane.rowIndex="5"
+                />
+                
+                
+                <Label text="Informacje Kontaktowe"
+                       GridPane.columnIndex="1" 
+                       styleClass="labelTitle"
+                       GridPane.rowIndex="6"
+                />
+            
+                <Label text="Miasto:" 
+                       styleClass="labelTitle-15"
+                       GridPane.columnIndex="0" 
+                       GridPane.rowIndex="7"                     
+                />
+ 
+                <TextField 
+                    GridPane.columnIndex="1"
+                    GridPane.rowIndex="7"
+                    text="Miasto"
+                    fx:id="cityTextField"
+                />
+            
+                <Label text="Kraj:" 
+                       styleClass="labelTitle-15"
+                       GridPane.columnIndex="0" 
+                       GridPane.rowIndex="8"
+                />
+ 
+                <TextField 
+                    GridPane.columnIndex="1"
+                    GridPane.rowIndex="8"
+                    text="Kraj"
+                    fx:id="countryTextField"
+                />
+            
+                <Label text="nr domu:" 
+                       styleClass="labelTitle-15"
+                       GridPane.columnIndex="0" 
+                       GridPane.rowIndex="9"
+                />
+ 
+                <TextField  
+                    GridPane.columnIndex="1"
+                    GridPane.rowIndex="9"
+                    text="21A"
+                    fx:id="homeNrTextField"
+                />
+            
+                <Label text="Kod pocztowy:" 
+                       styleClass="labelTitle-15"
+                       GridPane.columnIndex="0" 
+                       GridPane.rowIndex="10"
+                />
+ 
+                <TextField 
+                    GridPane.columnIndex="1"
+                    GridPane.rowIndex="10"
+                    text="1234AA"
+                    fx:id="postCodeTextField"
+                />
+            
+                <Label text="Ulica:" 
+                       styleClass="labelTitle-15"
+                       GridPane.columnIndex="0" 
+                       GridPane.rowIndex="11"
+                />
+ 
+                <TextField 
+                    GridPane.columnIndex="1"
+                    GridPane.rowIndex="11"
+                    text="Wegrow"
+                    fx:id="streetTextField"
+                />
+                
+                
+                <Label 
+                    GridPane.columnIndex="1" 
+                    styleClass="labelTitle"
+                    GridPane.rowIndex="12"
+                />
+                
+                
+                <Label text="Informacje Finansowe"
+                       GridPane.columnIndex="1" 
+                       styleClass="labelTitle"
+                       GridPane.rowIndex="13"
+                />
+                
+                <Label text="Nr Konta:" 
+                       styleClass="labelTitle-15"
+                       GridPane.columnIndex="0" 
+                       GridPane.rowIndex="14"
+                />
+ 
+                <TextField 
+                    GridPane.columnIndex="1"
+                    GridPane.rowIndex="14"
+                    text="123123"
+                    disable="true"
+                    fx:id="bankAccountTextField"
+                />
+            
+                <Label text="Srodki na koncie:" 
+                       styleClass="labelTitle-15"
+                       GridPane.columnIndex="0" 
+                       GridPane.rowIndex="15"
+                />
+ 
+                <TextField 
+                    GridPane.columnIndex="1"
+                    GridPane.rowIndex="15"
+                    text="12345"
+                    disable="true"
+                    fx:id="availableAccountMoney"
+                />
+            
+                
+            </GridPane>
+        </center>
+        
+    </BorderPane>
+    
+</GridPane>

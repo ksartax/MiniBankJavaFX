@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+
+<GridPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" alignment="center"
+          styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" 
+          fx:controller="src.Controller.RegisterController">
+    
+    <stylesheets>
+        <URL value="@/src/Controller/view/style/register.css"/>
+        <URL value="@/src/Controller/view/style/core.css"/>
+    </stylesheets>
+    
+    <padding>
+        <Insets top="25" right="25" bottom="10" left="25"/>
+    </padding>
+
+
+    <ImageView fx:id="logo"  GridPane.columnIndex="0" GridPane.rowIndex="0" 
+               GridPane.columnSpan="2">
+    </ImageView>
+
+    
+    <HBox spacing="10" 
+          GridPane.rowIndex="1" 
+          GridPane.columnSpan="2">
+        
+        <padding>
+            <Insets top="25" left="120" bottom="10"/>
+        </padding>
+        
+        <Text id="register-text" text="Rejestracja" />
+    </HBox>
+    
+    <Label text="Imie:"
+           GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+ 
+    <TextField fx:id="firstNameField"
+        GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    
+    <Label text="Nazwisko:"
+           GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+ 
+    <TextField fx:id="lastNameField"
+        GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+ 
+    <Label text="Email:"
+           GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+ 
+    <TextField fx:id="emailField"
+        GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+ 
+    <Label text="Pin:" 
+           GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+ 
+    <PasswordField fx:id="passwordField"  
+                   GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+    
+    <Label fx:id="errorField" 
+           GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+    
+    <HBox spacing="10" 
+          GridPane.columnIndex="1" GridPane.rowIndex="7">
+        
+        <padding>
+            <Insets top="25" left="60"/>
+        </padding>
+        
+        <Button  styleClass="button" text="Rejestracja"     
+                 onAction="#registerButtonAction" fx:id="registerButton" />
+        
+        <Button  styleClass="button" text="Logowanie"     
+                 onAction="#redirectLoginButton" />
+    </HBox>
+    
+    <Text fx:id="actiontarget"
+          GridPane.columnIndex="1" GridPane.rowIndex="8"/>
+    
+</GridPane>

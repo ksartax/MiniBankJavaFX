@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+
+<FlowPane prefHeight="600.0" 
+          alignment="center" 
+          prefWidth="800.0" 
+          styleClass="mainFxmlClass" 
+          xmlns:fx="http://javafx.com/fxml/1" 
+          fx:controller="src.Controller.MenuController">
+
+     <stylesheets>
+            <URL value="@/src/Controller/view/style/core.css"/>
+            <URL value="@/src/Controller/view/style/menu.css"/>
+        </stylesheets> 
+    
+    <HBox spacing="10" >
+        
+        <padding>
+            <Insets top="25" />
+        </padding>
+                
+        <Label text="Nr Konta : " 
+               styleClass="labelTitle"
+               fx:id="accountNumber"
+        />
+                
+        <padding>
+            <Insets left="25" top="10"/>
+        </padding>
+                
+        <Label text="Ilość Środków na koncie : "
+               styleClass="labelTitle"
+               fx:id="accountMoney"
+        />
+                
+        <padding>
+            <Insets left="25" />
+        </padding>        
+                
+    </HBox>
+    
+    <GridPane id="AnchorPane" 
+              prefHeight="600.0" 
+              alignment="center" 
+              prefWidth="800.0" 
+              styleClass="mainFxmlClass" 
+    >
+    
+       
+    
+        <BorderPane styleClass="menuPanel" prefHeight="300.0" prefWidth="300.0" 
+                    GridPane.columnIndex="0" GridPane.rowIndex="1" >
+        
+            <center>
+                <Button prefHeight="250.0" prefWidth="200.0" styleClass="button" text="Profil"    
+                        onAction="#profilButton" fx:id="profilButton" />
+            </center>
+        
+        </BorderPane>
+    
+        <BorderPane styleClass="menuPanel" prefHeight="300.0" prefWidth="300.0" 
+                    GridPane.columnIndex="1" GridPane.rowIndex="1" >
+        
+            <center>
+                <Button prefHeight="250.0" prefWidth="200.0" styleClass="button" text="Tranzakcje Wychodzące"    
+                        onAction="#toTransactionButton" fx:id="toTransactionButton" />
+            </center>
+        
+        </BorderPane>
+    
+        <BorderPane styleClass="menuPanel" prefHeight="300.0" prefWidth="300.0" 
+                    GridPane.columnIndex="2" GridPane.rowIndex="1" >
+        
+            <center>
+                <Button prefHeight="250.0" prefWidth="200.0" styleClass="button" text="Tranzakcje Przychodzące"    
+                        onAction="#fromTransactionButton" fx:id="fromTransactionButton" />
+            </center>
+        
+        </BorderPane>
+    
+        <BorderPane styleClass="menuPanel" prefHeight="300.0" prefWidth="300.0" 
+                    GridPane.columnIndex="0" GridPane.rowIndex="2" >
+        
+            <center>
+                <Button prefHeight="250.0" prefWidth="200.0" styleClass="button" text="Wypłaty"    
+                        onAction="#removeMoneyButton" fx:id="removeMoneyButton" />
+            </center>
+        
+        </BorderPane>
+    
+        <BorderPane styleClass="menuPanel" prefHeight="300.0" prefWidth="300.0" 
+                    GridPane.columnIndex="1" GridPane.rowIndex="2" >
+        
+            <center>
+                <Button prefHeight="250.0" prefWidth="200.0" styleClass="button" text="Wpłata"    
+                        onAction="#receiveMoneyButton"  fx:id="receiveMoneyButton" />
+            </center>
+        
+        </BorderPane>
+    
+        <BorderPane styleClass="menuPanel" prefHeight="300.0" prefWidth="300.0" 
+                    GridPane.columnIndex="2" GridPane.rowIndex="2" >
+        
+            <center>
+                <Button prefHeight="250.0" prefWidth="200.0" styleClass="button" text="Wyloguj"    
+                        onAction="#logoutButton" fx:id="logoutButton" />
+            </center>
+        
+        </BorderPane>
+    
+    </GridPane>
+
+</FlowPane >

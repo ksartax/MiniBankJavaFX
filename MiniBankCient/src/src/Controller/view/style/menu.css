@@ -1,0 +1,21 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.menuPanel {
+    -fx-border-width: 5;
+    -fx-border-color: black;
+}
+
+.button {
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#61a2b1, #2A5058);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-size: 15px;
+}
+
+.button:hover{
+    -fx-background-color: linear-gradient(#61a3b9, #2A5098);;
+}
